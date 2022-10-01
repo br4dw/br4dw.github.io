@@ -10,13 +10,51 @@
     <title>About Me - Simple website</title>
 </head>
 
+<style type="text/tailwindcss">
+  @layer base {
+      .title {
+          @apply text-5xl lg:text-8xl break-all font-bold text-gray-200 px-6
+      }
+      .title.small { @apply text-3xl lg:text-5xl }
+      .subtitle.small { @apply text-2xl font-light }
+      .subtitle {
+          @apply text-base lg:text-3xl break-all font-medium lg:font-semibold text-gray-400 px-6
+      }
+      .contributor {
+          @apply flex cursor-pointer bg-gray-800 bg-opacity-50 py-4 px-10 font-semibold text-4xl text-gray-300 rounded-lg border-2 border-dashed border-gray-800 hover:border-gray-900 transition-all shadow-lg select-none hover:scale-[1.06]
+      }
+      .link {
+          @apply text-blue-400 hover:text-blue-300 cursor-pointer transition-all
+      }
+  }
+</style>
+
 <body class="bg-gray-700">
 
-    <div class="flex flex-col gap-20 items-center justify-center mt-40 mb-20">
-
-      <span>Hey, here's my about me...</span>
-
+  <nav class="flex p-6 bg-gray-800 bg-opacity-50 text-gray-200 items-center justify-between">
+    <div class="flex gap-10">
+      <a class="text-lg hover:text-blue-300" href="/simple-website.html">Home</a>
+      <a class="text-lg hover:text-blue-300" href="/about.html">About Me</a>
+      <a class="text-lg hover:text-blue-300" href="/number.html">Number</a>
+      <a class="text-lg hover:text-blue-300" href="/things.html">Things</a>
     </div>
+    <div class="flex gap-10">
+      <a class="text-lg hover:text-blue-300" href="#menu">
+        <svg class="w-8 h-8 fill-gray-200 hover:fill-blue-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <div class="flex flex-col gap-20 items-center justify-center mt-40 mb-20">
+	
+    <div class="flex flex-col gap-8 items-center justify-center ">
+      <h1 class="title">About me</h1>
+      <div class="flex flex-col items-center justify-center">
+        <h1 class="subtitle">Hey, here's my about me...</h1>
+      </div>
+    </div>
+  
+  </div>
 
 </body>
 </html>
